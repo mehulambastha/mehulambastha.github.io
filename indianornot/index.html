@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+	<meta name="msapplication-TileColor" content="#6aa9d9" />
+	<meta name="theme-color" content="#060606" />
+	<meta name="background-color" content="#001c30" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-title" content="Indian or not?" />
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cyborg/bootstrap.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		@font-face {
+			font-family: berkshire;
+			src: url(fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf);
+		}
+
+		@font-face {
+			font-family: sansita-xtrabold;
+			src: url(fonts/Sansita/Sansita-ExtraBold.ttf);
+		}
+
+		@font-face {
+			font-family: sansita-reg;
+			src: url(fonts/Sansita/Sansita-Regular.ttf);
+		}
+
+		#match-list {
+			overflow-y: scroll;
+			max-height: 70vh;
+		}
+
+		body {
+			max-height: 100vh;
+		}
+
+		#match-list img {
+			width: 2.3rem;
+		}
+
+		.footerBottom {
+			padding: 2px;
+			background: #d6d5d5;
+			color: black;
+			font-size: 1.2rem;
+			font-family: sansita-reg;
+		}
+
+		.h2-img {
+			width: 5rem;
+		}
+
+		.link {
+			width: 1.7rem;
+		}
+
+		#heading {
+			font-family: sansita-xtrabold;
+		}
+
+		.club {
+			font-family: sansita-reg;
+			color: white;
+			font-size: 1.5rem;
+		}
+
+		.description {
+			text-align: left;
+			font-size: 1.3rem;
+		}
+
+		.emoji {
+			font-size: 1.8rem;
+		}
+
+		.card {
+			background: #060606;
+			border: 1px solid white;
+		}
+
+		#add-group {
+			font-size: .8rem;
+		}
+
+		label {
+			font-size: 1rem;
+		}
+	</style>
+	<title>Indian or not ?</title>
+</head>
+
+<body>
+	<div class="container mt-10">
+		<div class="row">
+			<div class="col-md-8 m-auto">
+				<h3 class="text-center mb-2" id="heading">
+					<img src="assets/india.png" alt="pic" class="img-rounded h2-img mt-3" /><br />
+					Indian or not ?
+				</h3>
+				<p class="description">
+					A search bar created in light of current situations, which helps you
+					to find out which brand is Indian or Foreign.<br />An initiative by
+					<span class="club"><a href="https://www.facebook.com/davcpscn.ic/" target="_blank">Interact Club</a></span>
+					of
+					<span class="club">
+						<a href="http://davcpscn.com" target="_blank">
+							DAV Centenary Public School
+						</a>
+					</span>
+					<a href="https://www.facebook.com/DavCentenaryPublicSchoolChanderNagar/" target="_blank">
+						<img src="assets/facebook.png" class="link" />
+					</a>
+					, Chander Nagar, Ghaziabad. <span class="emoji">👇</span>
+				</p>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-control-lg" id="search" placeholder="Search brand name..." />
+					<label for="search" class="mt-2"><u>For example: search "colgate" or "panasonic"</u></label>
+				</div>
+				<div id="match-list" class="mb-5"></div>
+				<div class="text-center align-middle footerBottom fixed-bottom">
+					<span>Developed by Mehul Ambastha.
+						<a href="https://github.com/mehulambastha">
+							<img src="assets/github.png" alt="" class="link align-middle" /></a>
+						<a href="https://www.instagram.com/mehul.ambastha/">
+							<img src="assets/instagram-logo.png" class="link align-middle" alt="" /></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn btn-primary position-fixed" data-toggle="modal" data-target="#exampleModalCenter">
+			Launch demo modal
+		</button>
+		<div class="modal fade" id="prompt-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true" displayed="false">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+	</script>
+	<script src="app.js"></script>
+</body>
+
+</html>
