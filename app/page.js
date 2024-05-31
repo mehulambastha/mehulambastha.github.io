@@ -15,8 +15,8 @@ import Nothing from './components/windowComponents/Nothing'
 
 const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(true)
-  const [currentWindow, setCurrentWindow] = useState('readme')
-  
+  const [currentWindow, setCurrentWindow] = useState('trash')
+
 
   const updateWindowState = (state) => {
     setCurrentWindow(state)
@@ -37,15 +37,14 @@ const Page = () => {
       case 'trash':
         return <Trash />;
       default:
-        return <Nothing />;
+        return <Nothing />; 
     }
   };
 
 
-
   
   return (
-    <div>
+    <>
       <Navbar />
       <Desktop updateWindow = {updateWindowState} />
 
@@ -59,8 +58,9 @@ const Page = () => {
           </Window>  
       )}
 
+
       <BottomBar />
-    </div>
+    </>
   )
 }
 

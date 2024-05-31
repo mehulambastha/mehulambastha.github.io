@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Desktop = () => {
+const Desktop = ({updateWindow}) => {
+
+
+
   return (
     <div>
       desktoppp

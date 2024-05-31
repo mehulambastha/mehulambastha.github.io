@@ -2,8 +2,8 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
-      Navbar
+    <div className='fixed top-2 w-[98vw] m-auto ng-[#010180] text-white'>
+      
     </div>
   )
 }
