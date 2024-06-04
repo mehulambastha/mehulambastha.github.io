@@ -14,38 +14,45 @@ import Desktop from './components/desktopComponents/Desktop'
 import Nothing from './components/windowComponents/Nothing'
 
 const Page = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true)
-  const [currentWindow, setCurrentWindow] = useState('trash')
+  // const [isModalOpen, setIsModalOpen] = useState(true)
+  // const [currentWindow, setCurrentWindow] = useState('trash')
 
 
-  const updateWindowState = (state) => {
-    setCurrentWindow(state)
-  }
+  // const updateWindowState = (state) => {
+  //   setCurrentWindow(state)
+  // }
 
-  const renderWindowContent = () => {
-    switch (currentWindow) {
-      case 'readme':
-        return <Readme />;
-      case 'resume':
-        return <Resume />;
-      case 'treasure':
-        return <MyTreasure />;
-      case 'projects':
-        return <Projects />;
-      case 'portfolio':
-        return <Portfolio />;
-      case 'trash':
-        return <Trash />;
-      default:
-        return <Nothing />; 
-    }
-  };
+  // const renderWindowContent = () => {
+  //   switch (currentWindow) {
+  //     case 'readme':
+  //       return <Readme />;
+  //     case 'resume':
+  //       return <Resume />;
+  //     case 'treasure':
+  //       return <MyTreasure />;
+  //     case 'projects':
+  //       return <Projects />;
+  //     case 'portfolio':
+  //       return <Portfolio />;
+  //     case 'trash':
+  //       return <Trash />;
+  //     default:
+  //       return <Nothing />; 
+  //   }
+  // };
 
 
   
   return (
-    <>
-      <Navbar />
+    <div className='bg-white w-1/2 h-1/2'>
+
+    </div>
+  )
+}
+
+export default Page
+
+      {/* <Navbar />
       <Desktop updateWindow = {updateWindowState} />
 
 
@@ -59,9 +66,4 @@ const Page = () => {
       )}
 
 
-      <BottomBar />
-    </>
-  )
-}
-
-export default Page
+      <BottomBar /> */}
